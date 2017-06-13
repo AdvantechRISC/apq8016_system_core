@@ -710,11 +710,12 @@ service mtpd /system/bin/mtpd
     group vpn net_admin inet net_raw
     disabled
     oneshot
-
+#E keystore: Error opening keystore keymaster0 device.
 service keystore /system/bin/keystore /data/misc/keystore
     class main
     user keystore
     group keystore drmrpc
+    disabled
 
 service dumpstate /system/bin/dumpstate -s
     class main
